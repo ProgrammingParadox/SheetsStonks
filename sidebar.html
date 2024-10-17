@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+
+    <style>
+      body {
+        
+      }
+
+      .section {
+        padding: 10px;
+        margin: 10px 10px 0px 10px;
+
+        border: solid 1px #DDD;
+        border-radius: 4px;
+      }
+
+      .subsection:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .widget {
+        display: flex;
+        justify-content: space between;
+        flex-align: stretch;
+      }
+
+      .pair {
+        flex-grow: 2;
+      }
+
+      #stock-amount {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <input type="button" value="Cancel" onclick="google.script.host.close()" />
+    </div>
+
+    <div class="section">
+      <div class="subsection widget">
+        <div class="pair">
+          <input type="radio" name="buy-sell" id="buy" checked />
+          <label for="buy">Buy stocks</label>
+        </div>
+
+        <div class="pair">
+          <input type="radio" name="buy-sell" id="sell" />
+          <label for="sell">Sell stocks</label>
+        </div>
+      </div>
+
+      <div class="subsection widget">
+        <input type="number" 
+          name="stock-amount" 
+          id="stock-amount"
+
+          placeholder="amount"
+
+          min="1" max="100"
+        >
+      </div>
+    </div>
+  </body>
+</html>
